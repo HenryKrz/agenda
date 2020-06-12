@@ -6,7 +6,7 @@
         </a>
         <ul style="font-size: 18px">
             {% for evento in eventos %}
-            <li>{{ evento.titulo }} - {{ evento.get_data_evento}}</li>
+            <li>{{ evento.titulo }} - {{ evento.get_data_evento}} - {% if evento.local is not None %}{{ evento.local }}{% endif %}</li>
             {% endfor %}
         </ul>
     {% endblock %}
